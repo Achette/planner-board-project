@@ -1,8 +1,12 @@
 {
-  "todo": [
+  "users": [
     {
       "id": 1,
-      "name": "Igor Achete"
+      "name": "Igor Achete",
+      "email": "i.achette@live.com",
+      "country": "Brazil",
+      "profession": "software engineer",
+      "terms": true
     }
   ],
   "progress": [
