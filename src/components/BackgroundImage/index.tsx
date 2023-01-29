@@ -10,7 +10,7 @@ export const BackgroundImage = () => {
         alt="..."
         quality="100"
         layout="responsive"
-        sizes="100vh"
+        height="1000"
       />
     </div>
   );
