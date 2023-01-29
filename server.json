@@ -1,0 +1,18 @@
+{
+  "todo": [
+    {
+      "id": 1,
+      "name": "Igor Achete"
+    }
+  ],
+  "progress": [
+    {
+      "teste": "Igor Carvalho Achete"
+    }
+  ],
+  "done": [
+    {
+      "teste": "Igor"
+    }
+  ]
+}
