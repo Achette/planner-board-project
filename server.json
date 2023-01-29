@@ -31,10 +31,19 @@
       "fullname": "Helena Carvalho",
       "email": "helena@ymail.com",
       "country": "Alemanha",
-      "profession": "Socialite",
+      "profession": "Dona de casa",
       "password": "012345678",
       "terms": true,
       "id": 4
+    },
+    {
+      "fullname": "Selma Ferreira",
+      "email": "selma@qmail.com",
+      "country": "Brasil",
+      "profession": "Dona de casa",
+      "password": "145697745",
+      "terms": true,
+      "id": 5
     }
   ],
   "progress": [

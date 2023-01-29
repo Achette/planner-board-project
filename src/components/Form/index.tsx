@@ -14,7 +14,6 @@ import { SubmitHandler, useForm } from "react-hook-form";
 import { userData } from "../../types";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FormRegisterSchema } from "../../validation/FormSchemaValidation";
-import { api } from "../../pages/api/planner-services";
 import { ApiPlanner } from "../../pages/api/api";
 import { useRouter } from "next/router";
 
