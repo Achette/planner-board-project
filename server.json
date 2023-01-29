@@ -8,6 +8,33 @@
       "profession": "software engineer",
       "password": "0123456",
       "terms": true
+    },
+    {
+      "fullname": "Raphael Linhares",
+      "email": "raphael@teste.com.br",
+      "country": "Brazil",
+      "profession": "Public Employeer",
+      "password": "0123456789",
+      "terms": true,
+      "id": 2
+    },
+    {
+      "fullname": "Amanda Nascimento",
+      "email": "amanda@testemail.com.br",
+      "country": "Argentina",
+      "profession": "Psicologa",
+      "password": "987456321",
+      "terms": true,
+      "id": 3
+    },
+    {
+      "fullname": "Helena Carvalho",
+      "email": "helena@ymail.com",
+      "country": "Alemanha",
+      "profession": "Socialite",
+      "password": "012345678",
+      "terms": true,
+      "id": 4
     }
   ],
   "progress": [

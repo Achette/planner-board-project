@@ -7,12 +7,16 @@ import {
   Input,
   Stack,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import Link from "next/link";
 import { SubmitHandler, useForm } from "react-hook-form";
 import { userData } from "../../types";
 import { yupResolver } from "@hookform/resolvers/yup";
 import { FormRegisterSchema } from "../../validation/FormSchemaValidation";
+import { api } from "../../pages/api/planner-services";
+import { ApiPlanner } from "../../pages/api/api";
+import { useRouter } from "next/router";
 
 export function Form() {
   const {
@@ -21,8 +25,31 @@ export function Form() {
     formState: { errors, isSubmitting },
   } = useForm<userData>({ resolver: yupResolver(FormRegisterSchema) });
 
-  const onFormSubmit: SubmitHandler<userData> = (data) => {
-    console.log(data);
+  const toast = useToast();
+  const router = useRouter()
+
+  const onFormSubmit: SubmitHandler<userData> = async (data) => {
+    try {
+      await ApiPlanner.create(data);
+      toast({
+        title: "Saved!.",
+        description: "Successfully registered user!",
+        status: "success",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom-right",
+      });
+      router.push("/")
+    } catch (e) {
+      toast({
+        title: "Error!",
+        status: "error",
+        description: "Unable to register user.",
+        duration: 5000,
+        isClosable: true,
+        position: "bottom-right",
+      });
+    }
   };
 
   return (
@@ -144,9 +171,7 @@ export function Form() {
 
           <Flex w="100%" alignItems="center" justifyContent="center">
             <Checkbox mt="1rem" {...register("terms")}>
-              <Text fontSize={["smaller", "sm", "medium"]}>
-                I agree with the privacy terms
-              </Text>
+              <Text fontSize="medium">I agree with the privacy terms</Text>
             </Checkbox>
           </Flex>
 

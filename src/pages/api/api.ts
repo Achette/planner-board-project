@@ -1,5 +1,6 @@
 import axios from "axios";
 import { BASE_URL } from "../../constants/system";
+import { userData } from "../../types";
 
 
 export const ApiPlanner = {
@@ -13,4 +14,9 @@ export const ApiPlanner = {
       const response = await axios.get(`${BASE_URL}/todo/${id}`);
       return response.data;
     },
+
+    create: async(user: userData) => {
+      const response = await axios.post(`${BASE_URL}/users`, user)
+      return response.data
+    }
   };

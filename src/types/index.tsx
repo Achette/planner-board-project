@@ -1,5 +1,4 @@
 export type userData = {
-  id: number;
   fullname: string;
   email: string;
   country: string;
