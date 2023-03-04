@@ -6,3 +6,8 @@ export type userData = {
   password: string;
   terms: boolean;
 };
+
+export type loginUserData = {
+  email: string
+  password: string
+}

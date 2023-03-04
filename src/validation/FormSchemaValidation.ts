@@ -25,3 +25,14 @@ export const FormRegisterSchema = yup.object().shape({
     (value) => value === true
     )
 });
+
+export const FormLoginSchema = yup.object().shape({
+  email: yup
+  .string()
+  .required("E-mail is required.")
+  .email("E-mail invalid!"),
+  password: yup
+  .string()
+  .required("Password is required.")
+  .min(8, "Password must contain at least 8 characters. "),
+})

@@ -31,9 +31,11 @@ export default function Home() {
               </Button>
             </Link>
 
-            <Button colorScheme="purple" w="370px" borderRadius="3.125rem">
-              Log-In
-            </Button>
+            <Link href={`/login`}>
+              <Button colorScheme="purple" w="370px" borderRadius="3.125rem">
+                Login
+              </Button>
+            </Link>
           </Stack>
         </Box>
       </Flex>

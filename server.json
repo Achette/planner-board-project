@@ -44,6 +44,15 @@
       "password": "145697745",
       "terms": true,
       "id": 5
+    },
+    {
+      "fullname": "William Achete",
+      "email": "achette.william@gmail.com",
+      "country": "Brasil",
+      "profession": "Consultor",
+      "password": "012365478",
+      "terms": true,
+      "id": 6
     }
   ],
   "progress": [
