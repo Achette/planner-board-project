@@ -6,7 +6,7 @@
       "email": "i.achette@live.com",
       "country": "Brazil",
       "profession": "software engineer",
-      "password": "0123456",
+      "password": "01234567",
       "terms": true
     },
     {
@@ -53,6 +53,42 @@
       "password": "012365478",
       "terms": true,
       "id": 6
+    },
+    {
+      "fullname": "Elians Gomes",
+      "email": "eliane.delcia@gmail.com",
+      "country": "Brasil",
+      "profession": "Servidora Pública",
+      "password": "012345897",
+      "terms": true,
+      "id": 7
+    },
+    {
+      "fullname": "Elians Gomes",
+      "email": "eliane.delicia@gmail.com",
+      "country": "Brasil",
+      "profession": "Servidora Pública",
+      "password": "012365747",
+      "terms": true,
+      "id": 8
+    },
+    {
+      "fullname": "Adriano Gomes",
+      "email": "Adriano@teste.com",
+      "country": "Brasil",
+      "profession": "Web Dev",
+      "password": "01236547",
+      "terms": true,
+      "id": 9
+    },
+    {
+      "fullname": "Victor Moro",
+      "email": "victormoro@teste.com",
+      "country": "Brasil",
+      "profession": "stress",
+      "password": "012345678",
+      "terms": true,
+      "id": 10
     }
   ],
   "progress": [

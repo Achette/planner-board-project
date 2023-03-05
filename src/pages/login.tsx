@@ -12,10 +12,12 @@ import {
 import { yupResolver } from "@hookform/resolvers/yup";
 import Head from "next/head";
 import Link from "next/link";
+import React from "react";
 import { useForm } from "react-hook-form";
 import { BackgroundImage } from "../components";
 import { loginUserData } from "../types";
 import { FormLoginSchema } from "../validation/FormSchemaValidation";
+import { ApiPlanner } from "./api/api";
 
 export default function Login() {
   const {
@@ -24,10 +26,14 @@ export default function Login() {
     formState: { errors, isSubmitting },
   } = useForm<loginUserData>({ resolver: yupResolver(FormLoginSchema) });
 
-    const onFormSubmit = (data: loginUserData) => {
-        console.log(data)
-    }
+  const onFormSubmit = React.useCallback( async(data: loginUserData) => {
+    const isAuth = await ApiPlanner.getAllUser(data);
+    console.log(isAuth);
+  }, []);
 
+/*   React.useEffect(() => {
+    onFormSubmit({})
+  }, [onFormSubmit]) */
   return (
     <Box display="flex">
       <Head>
@@ -104,8 +110,8 @@ export default function Login() {
                 colorScheme="purple"
                 w="200px"
                 borderRadius="3.125rem"
-                     onClick={() => handleSubmit(onFormSubmit)()}
-                isLoading={isSubmitting} 
+                onClick={() => handleSubmit(onFormSubmit)()}
+                isLoading={isSubmitting}
               >
                 Login
               </Button>
