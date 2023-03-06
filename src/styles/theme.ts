@@ -10,6 +10,7 @@ export const theme = extendTheme({
       "900": "#181B23",
       "50": "#EEEEF2",
     },
+    black: "#000",
   },
   styles: {
     global: {
