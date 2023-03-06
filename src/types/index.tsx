@@ -11,3 +11,18 @@ export type loginUserData = {
   email: string;
   password: string;
 };
+
+export type WeatherProps = {
+  sys: {
+    country: string;
+  };
+  weather: [
+    {
+      main: string;
+      description: string;
+    }
+  ];
+  name: string;
+};
+
+

@@ -107,6 +107,15 @@
       "password": "0123456789",
       "terms": true,
       "id": 12
+    },
+    {
+      "fullname": "Paulo Moutinho",
+      "email": "paulomoutinho@teste.com",
+      "country": "Brasil",
+      "profession": "WebDev",
+      "password": "01234567",
+      "terms": true,
+      "id": 13
     }
   ],
   "progress": [

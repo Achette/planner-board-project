@@ -1,9 +1,9 @@
 import axios from "axios";
 import { BASE_URL } from "../../constants/system";
-import { loginUserData, userData } from "../../types";
+import { loginUserData, userData, WeatherProps } from "../../types";
 
 export const ApiPlanner = {
-  // Busca todos os To-do
+  // Gerencia o cadastro e login dos usuários
   getAll: async () => {
     const response = await axios.get(`${BASE_URL}/todo`);
     return response.data;
@@ -39,5 +39,16 @@ export const ApiPlanner = {
       }
     });
     return request;
+  },
+
+  // Api que faz a requisição do clima
+
+  getWeather: async (lat?: number, lon?: number) => {
+    const response = await axios.get<WeatherProps>(
+      `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=a0b021d01518866ba7871cc0b3088045`
+    );
+    const data = response.data;
+
+    return data;
   },
 };
