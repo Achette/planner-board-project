@@ -31,14 +31,14 @@ export function Form() {
     try {
       await ApiPlanner.create(data);
       toast({
-        title: "Saved!.",
+        title: "Saved!",
         description: "Successfully registered user!",
         status: "success",
         duration: 5000,
         isClosable: true,
         position: "bottom-right",
       });
-      router.push("/")
+      router.push("/login")
     } catch (e) {
       toast({
         title: "Error!",

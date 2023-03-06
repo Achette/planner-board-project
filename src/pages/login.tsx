@@ -8,10 +8,12 @@ import {
   Input,
   Stack,
   Text,
+  useToast,
 } from "@chakra-ui/react";
 import { yupResolver } from "@hookform/resolvers/yup";
 import Head from "next/head";
 import Link from "next/link";
+import { useRouter } from "next/router";
 import React from "react";
 import { useForm } from "react-hook-form";
 import { BackgroundImage } from "../components";
@@ -26,14 +28,53 @@ export default function Login() {
     formState: { errors, isSubmitting },
   } = useForm<loginUserData>({ resolver: yupResolver(FormLoginSchema) });
 
-  const onFormSubmit = React.useCallback( async(data: loginUserData) => {
-    const isAuth = await ApiPlanner.getAllUser(data);
-    console.log(isAuth);
-  }, []);
+  const [auth, setAuth] = React.useState<boolean>(false);
 
-/*   React.useEffect(() => {
-    onFormSubmit({})
-  }, [onFormSubmit]) */
+  const toast = useToast();
+  const router = useRouter();
+
+  const onFormSubmit = React.useCallback(
+    (data: loginUserData) => {
+      ApiPlanner.getAllUser(data)
+        .then((res) => {
+          setAuth(res.auth);
+
+          if (res.auth) {
+            toast({
+              title: "Saved!",
+              description: "Successfully registered user!",
+              status: "success",
+              duration: 5000,
+              isClosable: true,
+              position: "bottom-right",
+            });
+            router.push("/dashboard");
+            return
+          }
+
+          if(res.error) {
+            throw new Error()
+          }
+        })
+        .catch((error) => {
+
+          toast({
+            title: "Error!",
+            status: "error",
+            description: "Cannot find user. Please try again or register.",
+            duration: 5000,
+            isClosable: true,
+            position: "bottom-right",
+          });
+        });
+
+    },
+    [router, toast, setAuth]
+  );
+
+  React.useEffect(() => {
+    localStorage.setItem("auth", JSON.stringify(auth));
+  }, [auth]);
   return (
     <Box display="flex">
       <Head>

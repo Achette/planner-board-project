@@ -89,6 +89,24 @@
       "password": "012345678",
       "terms": true,
       "id": 10
+    },
+    {
+      "fullname": "Henrique Fraia",
+      "email": "henriquefraia@teste.com.br",
+      "country": "Brasil",
+      "profession": "Web Dev",
+      "password": "012345678",
+      "terms": true,
+      "id": 11
+    },
+    {
+      "fullname": "Samuel Martins",
+      "email": "aelmartins@teste.com",
+      "country": "Cuba",
+      "profession": "Designer",
+      "password": "0123456789",
+      "terms": true,
+      "id": 12
     }
   ],
   "progress": [

@@ -23,15 +23,21 @@ export const ApiPlanner = {
     const response = await axios.get(`${BASE_URL}/users`);
     const users = await response.data;
 
-    let auth = false;
+    let request = {
+      auth: false,
+      error: true,
+    };
     users.forEach((user: loginUserData) => {
       if (
         user.email === userData.email &&
         user.password === userData.password
       ) {
-        auth = true;
+        return (request = {
+          auth: true,
+          error: false,
+        });
       }
     });
-    return auth;
+    return request;
   },
 };
