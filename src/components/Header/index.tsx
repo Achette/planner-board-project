@@ -14,16 +14,14 @@ export default function Header() {
     climate: "",
   });
 
-const [lat, setLat] = React.useState<number>()
-const [lon, setLon] = React.useState<number>()
-
+  const [lat, setLat] = React.useState<number>(0);
+  const [lon, setLon] = React.useState<number>(0);
 
   React.useEffect(() => {
-
     navigator.geolocation.getCurrentPosition((position) => {
-       setLat(position.coords.latitude)
-       setLon(position.coords.longitude)
-    })
+      setLat(position.coords.latitude);
+      setLon(position.coords.longitude);
+    });
 
     setDate(getFullDate());
     ApiPlanner.getWeather(lat, lon).then((res) => {
@@ -40,14 +38,14 @@ const [lon, setLon] = React.useState<number>()
     }, 1000);
   }, [setTime, setDate, weather, lat, lon, setLat, setLon]);
 
-
   return (
     <Stack
       h="8.125rem"
       w="100%"
-      bg={theme.colors.white}
+      bg={theme.colors.white[100]}
       display="flex"
       justifyContent="center"
+      boxShadow="0px 4px 24px rgba(168, 168, 168, 0.25)"
     >
       <HStack justifyContent="space-between">
         <Box
@@ -86,8 +84,22 @@ const [lon, setLon] = React.useState<number>()
           <Text fontWeight={400} fontSize="1em">
             {weather.city} - {weather.country}
           </Text>
-          <Text fontSize="1.5rem">{weather.climate}</Text>
-          <Text fontSize="1rem">{weather.description}</Text>
+          <Text fontSize="1.5rem" fontWeight="700">
+            {weather.climate}
+          </Text>
+          <Text fontSize="0.75rem">{weather.description}</Text>
+        </Box>
+
+        <Box
+          display="flex"
+          flexDirection="column"
+          alignItems="center"
+          color={theme.colors.gray[100]}
+        >
+          <Text fontWeight={700} fontSize="2rem">
+            {`<<<`}
+          </Text>
+          <Text fontSize="1.25rem">LOGOUT</Text>
         </Box>
       </HStack>
     </Stack>

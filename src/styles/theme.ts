@@ -9,9 +9,13 @@ export const theme = extendTheme({
     gray: {
       "900": "#181B23",
       "50": "#EEEEF2",
-      "100": "#3B3E45"
+      "100": "#3B3E45",
     },
     black: "#000",
+    white: {
+      "50": "#FBFBFB",
+      "100": "#FFF",
+    },
   },
   styles: {
     global: {
