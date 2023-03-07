@@ -16,6 +16,15 @@ export const theme = extendTheme({
       "50": "#FBFBFB",
       "100": "#FFF",
     },
+    week: {
+      monday: "#FF0024",
+      tuesday: "#FF8000",
+      wednesday: "#FFCE00",
+      thursday: "#FE4B65",
+      friday: "#FEA54B",
+      saturday: "#FEDC4B",
+      sunday: "#FD7E8F",
+    },
   },
   styles: {
     global: {
