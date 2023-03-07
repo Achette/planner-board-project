@@ -16,6 +16,7 @@ export const theme = extendTheme({
       "50": "#FBFBFB",
       "100": "#FFF",
     },
+    yellow: "rgba(254, 206, 0, 1)",
     week: {
       monday: "#FF0024",
       tuesday: "#FF8000",
@@ -34,7 +35,7 @@ export const theme = extendTheme({
       },
     },
   },
-  background: {
-    background1: "linear-gradient(90deg, #FF2D04 0%, #C13216 100%)",
+  shadow: {
+    black: "rgba(168, 168, 168, 0.25)",
   },
 });

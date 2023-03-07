@@ -45,7 +45,7 @@ export default function Header() {
       bg={theme.colors.white[100]}
       display="flex"
       justifyContent="center"
-      boxShadow="0px 4px 24px rgba(168, 168, 168, 0.25)"
+      boxShadow={`0px 4px 24px ${theme.shadow.black}`}
     >
       <HStack justifyContent="space-between">
         <Box

@@ -3,9 +3,10 @@ import { theme } from "../../styles/theme";
 
 export const WeekBar = () => {
   return (
-    <HStack color={theme.colors.black}>
+    <HStack color={theme.colors.black} padding="0 0.5rem">
       <Box
         bg={theme.colors.white[100]}
+        border={`0.5px solid ${theme.colors.gray[50]}`}
         w="6rem"
         h="2rem"
         borderRadius="0.5rem"
