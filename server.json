@@ -1,6 +1,23 @@
 {
   "users": [
-
+    {
+      "fullname": "raul araujo",
+      "email": "raul@teste.com",
+      "country": "brasil",
+      "profession": "web dev",
+      "password": "01234567",
+      "terms": true,
+      "id": 1
+    },
+    {
+      "fullname": "Helena Carvalho",
+      "email": "helena@teste.com",
+      "country": "Brasil",
+      "profession": "Padeira",
+      "password": "12345678",
+      "terms": true,
+      "id": 2
+    }
   ],
   "progress": [
     {

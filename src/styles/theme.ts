@@ -16,6 +16,7 @@ export const theme = extendTheme({
       "50": "#FBFBFB",
       "100": "#FFF",
     },
+    blue: "#0D99FF",
     yellow: "rgba(254, 206, 0, 1)",
     week: {
       monday: "#FF0024",
